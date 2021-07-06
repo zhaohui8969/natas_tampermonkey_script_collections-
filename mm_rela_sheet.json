@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         mm rela sheet
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       natas
+// @match        *://zhuanlan.zhihu.com/p/*
+// @match        *://maimai.cn/*
+// @icon         none
+// @grant        none
+// @run-at       document-end
+// @require http://code.jquery.com/jquery-3.3.1.min.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    setTimeout(function(){
+        console.log("mm rela sheet");
+        document.title='Jupyter notebook show echarts bar graph';
+        $('head').append('<link rel="shortcut icon" type="image/png" href="https://www.baidu.com/favicon.ico"/>');
+        document.querySelector("link[rel~='icon']").href="https://www.baidu.com/favicon.ico";
+    }, 1000);
+})();
